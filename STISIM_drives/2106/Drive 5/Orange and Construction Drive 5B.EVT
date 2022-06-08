@@ -1,0 +1,36 @@
+//
+// by Austin Zamarripa and Tory Spindle
+//
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+//Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Break.txt
+//Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Break.txt
+
+//
+// Shorten the run by starting further into it than 0
+//
+
+//
+// Set the initial speed limit
+//
+
+
+0,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Drive 5\Segment 6\2106_Construction_Difficult_Version_5B.evt
+3800, Previously Defined Events, C:\STISIM3\Scenarios\2106\Drive 5\Segment 5\BridgePass.pde
+8900,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Drive 5\Segment 5\2106_Complete_Test_1_Version_5B.pde
+18900, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 5\Segment 4\2106_OrangeRun_Version_5B.evt
+
+//
+// End the simulation run
+//
+
+//38500,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+

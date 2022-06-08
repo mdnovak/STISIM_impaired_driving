@@ -1,0 +1,521 @@
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_ConstructionZone.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_ConstructionZone.txt
+Config_Start_Y = 6{0}
+
+//
+// Data collection
+//
+
+1000, Begin Block Save, 1, .01, Construction, 1, 6, 4, 23, 74, 75, 18, 46#1, 61, 62
+
+//
+// Set parameters defining what happens if the driver crashes
+//
+
+   0, Crash Settings, 0, 6{0}, 6, 25
+1000, Crash Settings, 0, 18{0}, 6, 25
+1400, Crash Settings, 0, 6{0}, 6, 25
+1650, Crash Settings, 0, 18{0}, 6, 25
+2050, Crash Settings, 0, 6{0}, 6, 25
+2220, Crash Settings, 0, 18{0}, 6, 25
+2425, Crash Settings, 0, 6{0}, 6, 25
+
+//
+// Define our roadway sections
+//
+
+   0, Roadway, 12, 4, 2, 2, 0, 10, 10, 0.5, 0.5, 0, -1, C:\STISIM3\Data\Textures\Road16.Jva, 255/255/255, -1, 0, -1, C:\STISIM3\Data\Textures\Road16.Jva, 255/255/255, -1, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 12, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 12, 0, 0, , , , 0
+ 900, Roadway, 12, 4, 2, 2, 0, 10, 10, 0.5, 0.5, 100, -1, C:\STISIM3\Data\Textures\Road16.Jva, 255/255/255, -1, 0, -1, C:\STISIM3\Data\Textures\Road16.Jva, 255/255/255, -1, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 20, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 30, 15, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 12, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 12, 0, 0, , , , 0
+1600, Roadway, 12, 4, 2, 2, 0, 10, 10, 0.5, 0.5, 100, -1, C:\STISIM3\Data\Textures\Road16.Jva, 255/255/255, -1, 0, -1, C:\STISIM3\Data\Textures\Road16.Jva, 255/255/255, -1, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, 0, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 12, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 12, 0, 0, , , , 0
+
+//
+// Define any hills
+//
+
+ 400, Hill, 500, 0.0075
+1000, Hill, 500, -0.0075
+2000, Hill, 500, -0.0075
+2600, Hill, 500, 0.0075
+
+//
+// Add horizontal curves
+//
+
+ 700, Curve, 0, 200, 300, 200, 0.001
+1600, Curve, 0, 100, 300, 100, -0.0025
+2400, Curve, 0, 200, 200, 150, -0.0037
+3000, Curve, 0, 100, 100, 100, 0.005
+
+//
+// Display the initial speed limit
+//
+ 
+  0, Speed Limit, 58
+100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp55Mph.mesh
+
+//
+// Warn the driver that construction is ahead
+//
+
+ 400,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,28,0
+ 900,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,28,0
+3340,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,-28,180
+
+//
+// Add some background telephone poles
+//
+
+150, Static Object, 0, -10{2}, 0, 0, 0, 0, C:\Stisim3\Data\Miscellaneous\TelephonePole.Mka, 3200, 175
+ 
+//
+// Add some background buildings
+//
+
+ 850, Building, 0, 20{1}, U9
+1350, Building, 0, 7{1}, U12
+1925, Building, 0, 7{1}, U13
+2780, Building, 0, 7{1}, U12
+
+//
+// Begin the construction zone with some barrels
+//
+
+1040, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1045, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1050, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1055, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1060, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1075, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+
+//
+// Block the two center lanes
+//
+
+ 980, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1000, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1030, Barrel, 0, -3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1060, Barrel, 0, -5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1090, Barrel, 0, -7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1120, Barrel, 0, -10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1150, Barrel, 0, -11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1180, Barrel, 0, -11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1210, Barrel, 0, -11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1240, Barrel, 0, -11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1270, Barrel, 0, -11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1300, Barrel, 0, -11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1330, Barrel, 0, -10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1360, Barrel, 0, -7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1390, Barrel, 0, -5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1420, Barrel, 0, -3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+1030, Barrel, 0, 3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1060, Barrel, 0, 5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1090, Barrel, 0, 7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1120, Barrel, 0, 10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1150, Barrel, 0, 13{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1180, Barrel, 0, 13{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1210, Barrel, 0, 13{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1240, Barrel, 0, 13{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1270, Barrel, 0, 13{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1300, Barrel, 0, 13{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1330, Barrel, 0, 10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1360, Barrel, 0, 7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1390, Barrel, 0, 5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1420, Barrel, 0, 3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1450, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1480, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+//
+// Place construction Objects within tubes
+//
+
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1200,0,0
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1250,0,0
+1110, Vehicles, 0, 0{0}, 0{0}, 1, T30, 1, 0
+1150, Vehicles, 0, 0{0}, 0{0}, 1, CN4, 1, 0
+1305, Vehicles, 0, -1{0}, 0{0}, 1, CN1, 1, 0
+1350, Vehicles, 0, 1{0}, 0{0}, 3, T30, 1, 0
+1300, Pedestrian, 0, 10, 5, 11.7{0}, F, 20
+1400, Pedestrian, 0, 10, 4, 10{0}, F, 21
+
+//
+// Add construction objects on the roadway shoulders
+//
+
+1430, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+1490, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+1640, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+1410, Barrel, 0, 32{0}, 3, 5, C:\STISIM3\Sound\Thud.wav, 100
+1410, Barrel, 0, 36{0}, 3, 5, C:\STISIM3\Sound\Thud.wav, 100
+1390, Static Object, 0, 25{0}, 0.4, 10, 20, -90, C:\STISIM3\Data\LaneMarkers\Cone.mesh
+
+//
+// Add lane markers on right shoulder
+//
+
+1285, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1290, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1295, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1300, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1305, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1310, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1325, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+1335, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+
+//
+// Add lane markers to block the right lane
+//
+
+1460, Barrel, 0, 22{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1480, Barrel, 0, 18{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1505, Barrel, 0, 15{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1525, Barrel, 0, 12.5{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1545, Barrel, 0, 12.5{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1565, Barrel, 0, 12.5{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1585, Barrel, 0, 12.5{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1605, Barrel, 0, 17.5{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1625, Barrel, 0, 22{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+//
+// Place construction objects in the lane markers
+//
+
+1525, Vehicles, 0, 30{0}, 0{0}, 4, CN8, 1, 0
+1530, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+1540, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+1550, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+1560, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+1545, Collision Block, 0, 20{0}, 35, 10
+   0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1600,0,35
+
+//
+// Park vehicles on shoulder
+//
+
+1100, Vehicles, 0, 30{0}, 0{0}, 1, T29, 1, 0
+1140, Vehicles, 0, 29{0}, 0{0}, 1, CN1, 1, 0
+1200, Vehicles, 0, 31{0}, 0{0}, 1, CN1, 1, 0
+1700, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+1750, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+1800, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+1850, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+2065, Vehicles, 0, 39{0}, 0{0}, 1, CN1, 1, 0
+2147, Vehicles, 0, 33{0}, 0{0}, 1, CN1, 1, 0
+
+//
+// Add workwers to the scene
+//
+
+1085, Pedestrian, 0, 0, 0, 30{0}, L, 20
+1087, Pedestrian, 0, 0, 0, 33{0}, R, 21
+1385, Pedestrian, 0, 0, 0, 30{0}, F, 21
+1555, Pedestrian, 0, 0, 0, 30{0}, F, 20
+
+//
+// More construction objects on the shoulder
+//
+
+1985, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1980, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1995, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2000, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2005, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2010, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2015, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+2025, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+
+//
+// Block the driver's left lane
+//
+
+1510, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1540, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1570, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1600, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1630, Barrel, 0, -3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1660, Barrel, 0, -5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1690, Barrel, 0, -7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1720, Barrel, 0, -10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1750, Barrel, 0, -12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1780, Barrel, 0, -12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1810, Barrel, 0, -12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1840, Barrel, 0, -12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1870, Barrel, 0, -12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1900, Barrel, 0, -12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1930, Barrel, 0, -10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1960, Barrel, 0, -7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1990, Barrel, 0, -5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2020, Barrel, 0, -3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2050, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2080, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2100, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+1630, Barrel, 0, 3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1660, Barrel, 0, 5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1690, Barrel, 0, 7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1720, Barrel, 0, 10{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1750, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1780, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1810, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1840, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1870, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1900, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1930, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1960, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+1990, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2020, Barrel, 0, 12{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2040, Barrel, 0, 11{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2060, Barrel, 0, 7{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2080, Barrel, 0, 5{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2100, Barrel, 0, 3{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2125, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2140, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2170, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2200, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2230, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2260, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2290, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2320, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2350, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2380, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2410, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+// Right side barrels
+1630, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1660, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1690, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1720, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1750, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1780, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1810, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1840, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1870, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1900, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1930, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1960, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+1990, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2020, Barrel, 0, -1{1}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+
+
+//
+// Add construction material
+//
+
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1750,0,0
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1800,0,0
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1850,0,0
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,1950,0,0
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2000,0,0
+1900, Vehicles, 0, 0{0}, 0{0}, 4, CN8, 1, 0
+ 
+//
+// Block off the driver's right lane
+//
+
+2060, Barrel, 0, 22{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2080, Barrel, 0, 19{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2105, Barrel, 0, 16{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2125, Barrel, 0, 13{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2145, Barrel, 0, 13{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2165, Barrel, 0, 13{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2185, Barrel, 0, 13{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2205, Barrel, 0, 18{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2225, Barrel, 0, 22{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2230, Barrel, 0, 24{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2260, Barrel, 0, 24{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2290, Barrel, 0, 24{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2320, Barrel, 0, 24{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2350, Barrel, 0, 24{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+//
+// Add construction objects
+//
+
+2100, Vehicles, 0, 30{0}, 0{0}, 2, CN8, 1, 0
+2140, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+2150, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+2160, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+2170, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+2155, Collision Block, 0, 20{0}, 35, 10
+   0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2200,0,35
+
+//
+// Add lane markers along the shoulder
+//
+
+2335, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2340, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2345, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2350, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2355, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2360, Barrel, 0, 40{0}, 4;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2365, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+2385, Static Object, 0, 36{0}, 0, 40, 0, 0, C:\STISIM3\Data\Construction\Barricade.Mka
+
+//
+// Block the driver's right lane
+//
+
+2245, Barrel, 0, 0{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2265, Barrel, 0, 4{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2285, Barrel, 0, 8{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2305, Barrel, 0, 12{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2325, Barrel, 0, 12{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2345, Barrel, 0, 12{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2365, Barrel, 0, 12{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2385, Barrel, 0, 8{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2405, Barrel, 0, 4{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2425, Barrel, 0, 0{0}, 4;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+2430, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2460, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2490, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2520, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2550, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2580, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2610, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2640, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2670, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2700, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2730, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2760, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2790, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2820, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2850, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2880, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2910, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2940, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+2970, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3000, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3030, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3060, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3090, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3120, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3150, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3180, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3210, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3240, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3270, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+3300, Barrel, 0, 0{0}, 2;R, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+2380, Barrel, 0, 24{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2400, Barrel, 0, 22{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2410, Barrel, 0, 20{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2420, Barrel, 0, 16{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2440, Barrel, 0, 13{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+2470, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2510, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2530, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2560, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2590, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2620, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2650, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2680, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2710, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2740, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2770, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2800, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2830, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2860, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2890, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2920, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2950, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+2980, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3010, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3040, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3070, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3110, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3130, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3160, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3190, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3220, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3250, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+3280, Barrel, 0, 11{0}, 2;L, 4, C:\STISIM3\Sound\Thud.wav, 100
+
+//
+// Trucks at end on right including one that backs out
+//
+
+2470, Vehicles, 0, 20{0}, 0{0}, 1, CN1, 1, 0
+2700, Vehicles, 0, 33{0}, 0{0}, 4, CN1, 1, 0
+2800, Vehicles, 0, 33{0}, 0{0}, 4, CN1, 1, 0
+3190, Vehicles, 0, 20{0}, 0{0}, 1, CN1, 1, 0
+3290, Vehicles, 0, 20{0}, 0{0}, 1, CN1, 1, 0
+      3330, Vehicles#1, 0, 33{0}, 0{0}, 4, CN1, 1, 0, 3.5{0}, 2, -32{0}, , , 1, {25}, 2, 0{0}, , , 1, 3{26}, 2, 32{0}, , , 1, {25}, 2, 0{0}, , , 1
+
+//
+// More workers
+//
+
+2600, Pedestrian, 0, 5, 4, 16{0}, F, 20
+2700, Pedestrian, 0, 5, 4, 16{0}, F, 21
+2900, Pedestrian, 0, 5, 4, 16{0}, F, 21
+
+//
+// Add more construction objects
+//
+
+2550, Vehicles, 0, 20{0}, 0{0}, 1, CN3, 1, 0
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2600,0,24
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2650,0,24
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2850,0,24
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2900,0,24
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,2950,0,24
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\GravelPile.pde,3130,0,35
+
+3000, Vehicles, 0, 30{0}, 0{0}, 4, CN8, 1, 0
+3040, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+3050, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+3045, Collision Block, 0, 20{0}, 17, 10
+3080, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+3090, Static Object, 0, 20{0}, 0, 0, 0, 0, C:\STISIM3\Data\Construction\ConcretePipe.Mka
+3085, Collision Block, 0, 20{0}, 17, 10
+
+//
+// Add some oncoming traffic
+//
+
+1000, Vehicles, 0, -20{0}, 66{0}, 3, T*1~30, 1, 0
+1300, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+1400, Vehicles, 0, -20{0}, 66{0}, 3, S*1~53, 1, 0
+1700, Vehicles, 0, -20{0}, 66{0}, 3, T*1~30, 1, 0
+1800, Vehicles, 0, -20{0}, 66{0}, 3, T*1~30, 1, 0
+2000, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+2100, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+2300, Vehicles, 0, -20{0}, 66{0}, 3, E*2~9, 1, 0
+2500, Vehicles, 0, -20{0}, 66{0}, 3, T*1~30, 1, 0
+2800, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+3100, Vehicles, 0, -20{0}, 66{0}, 3, T*1~30, 1, 0
+3300, Vehicles, 0, -20{0}, 66{0}, 3, S*1~53, 1, 0
+3400, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+3500, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+3800, Vehicles, 0, -20{0}, 66{0}, 3, F*1~56, 1, 0
+3900, Vehicles, 0, -20{0}, 66{0}, 3, T*1~30, 1, 0
+4100, Vehicles, 0, -20{0}, 66{0}, 3, S*1~53, 1, 0
+4200, Vehicles, 0, -20{0}, 66{0}, 3, E*2~9, 1, 0
+
+//
+// Add workers with jackhammers
+//
+
+      1760, Animated Object, 0, 3{0}, 0{0}, 180, 0, 0, C:\STISIM3\Data\Animated Objects\Man_With_Jackhammer.mka, 10{0}, 1, Walk, 0, , 7, 0, 0{0}, 0{0}, {25}, 3, 1, C:\STISIM3\Sound\Jackhammer.wav, 3, 100, 0, 0, 1{0}, 2, Walk, 1, {25}, 4, 1, 3{26}, 1, Walk, 0, , 7, 0, 0, 0, {25}, 3, 1, C:\STISIM3\Sound\Jackhammer.wav, 3, 100, 0, 0
+
+      2955, Animated Object, 0, 18{0}, 0{0}, 180, 0, 0, C:\STISIM3\Data\Animated Objects\Man_With_Jackhammer.mka, 10{0}, 1, Walk, 0, , 7, 0, 0{0}, 0{0}, {25}, 3, 1, C:\STISIM3\Sound\Jackhammer.wav, 3, 100, 0, 0
+
+
+//
+// Add triggered events to the scenario
+//
+

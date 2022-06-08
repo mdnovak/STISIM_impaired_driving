@@ -1,0 +1,42 @@
+
+//
+// by Austin Zamarripa and Tory Spindle
+//
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_GroundWidth = 800
+Config_Poly_Out = 1
+Config_Button_PanLeft = 0
+Config_Button_PanRight = 0
+Config_Button_Pause = 0
+
+//
+// Call the different sections of the roadway
+//
+
+0, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 2\Orange and Construction Drive 2B.evt
+38900,Previously Defined Events, C:\STISIM3\Scenarios\2106\MinutePause.pde
+38900,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 2\Car Following Suburban Drive 2B.evt,-,,-,-,-
+
+
+
+//
+// End simulation run
+//
+
+104200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+
+//
+// Add triggered events to the scenario
+//
+

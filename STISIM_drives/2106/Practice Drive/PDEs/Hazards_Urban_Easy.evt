@@ -1,0 +1,97 @@
+
+//
+// by George Park
+//
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_UrbanDriving.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_UrbanDriving.txt
+Config_Start_Y = -6{1}
+Config_GroundWidth = -1
+
+//
+// Data collection
+//
+
+1100, Begin Block Save, 1, .01, Data Collection 1, 1, 6, 7, 23, 18, 74, 75, 46#1, 65
+1975, End Block Save
+2100, Begin Block Save, 1, .01, Data Collection 2, 1, 6, 7, 23, 18, 74, 75, 46#2, 65
+2975, End Block Save
+3100, Begin Block Save, 1, .01, Data Collection 3, 1, 6, 7, 23, 18, 74, 75, 35, 36, 46#3, 66, 2
+3800, End Block Save
+3900, Begin Block Save, 1, .01, Data Collection 4, 1, 6, 7, 23, 18, 59, 60, 46#6
+4200, End Block Save
+5200, Begin Block Save, 1, .01, Data Collection 5, 1, 6, 7, 23, 18, 74, 75, 46#4, 65
+6175, End Block Save
+6300, Begin Block Save, 1, .01, Data Collection 6, 1, 6, 7, 23, 18, 74, 75, 35, 36, 46#5, 66, 2
+7000, End Block Save
+8100, Begin Block Save, 1, .01, Data Collection 7, 1, 6, 7, 23, 18, 58, 60, 0, 0, 0, 37, 38, 0
+8400, End Block Save
+
+//
+// Define what will happen if the driver crashes
+//
+
+0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\CrashSettings_Shops.pde
+
+//
+// Define our roadway sections
+//
+
+   0, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -5, 8, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 12, 0, -5, 8, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 12, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+1300, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 100, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+4500, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 100, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+5400, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 100, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+
+//
+// Add any horizontal curves
+//
+
+   0, Curve, 0, 500, 500, 500, -0.001
+5200, Curve, 0, 275, 450, 275, 0.001
+
+//
+// Define what trees can be used
+//
+
+0, Tree, 0, 0, 4, 0{0}, 0{0}, 0
+
+//
+// Display our speed limits
+//
+
+   0, Speed Limit, 48, 0
+ 100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+1200, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+2200, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+4800, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+
+//
+// Define the roadway environments that will be driven through
+//
+
+   0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Shops_1_A01.pde
+1000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Shops_1_A02.pde
+2000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Shops_1_A03.pde
+4200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Shops_1_A04.pde
+5200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Shops_1_A05.pde
+6200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Shops_1_A06.pde
+
+//
+// Add an emergency vehicle approaching the driver
+//
+
+      4300, Vehicles, 2000, -6{0}, 80{0}, 3, E8, 1, 1, {25}, 9, .5, {25}, 5, 1, C:\STISIM3\Sound\EmergencyVehicle.wav, 3, 100
+
+//
+// End the simulation drive
+//
+

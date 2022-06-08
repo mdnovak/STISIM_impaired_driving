@@ -1,0 +1,91 @@
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_SignalPractice.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_SignalPractice.txt
+
+
+//
+// Define our roadways
+//
+
+// ROAD: 2 lanes, dbl yellow, grass
+
+           0, Roadway, 14, 2, 1, 2, 1, 10, 10, 0.4, 0.4, 100, 0, C:\STISIM3\Data\Textures\Road24.jva, 255/255/255, 6, 6, 0, C:\STISIM3\Data\Textures\Road24.jva, 255/255/255, 6, 6, 0, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 500, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 500, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, C:\STISIM3\Data\Textures\Road24.jva, 255/255/255, 6, 6, 
+
+
+// ROAD: 4 lanes, dbl yellow, grass
+
+           6700, Roadway, 14, 4, 2, 2, 1, 10, 10, 0.4, 0.4, 100, 0, C:\STISIM3\Data\Textures\Road24.jva, 255/255/255, 6, 6, 0, C:\STISIM3\Data\Textures\Road24.jva, 255/255/255, 6, 6, 0, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 500, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 500, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, C:\STISIM3\Data\Textures\Road24.jva, 255/255/255, 6, 6, 
+
+//
+// Add some curves to force the driver to do something
+//
+
+4700, Sign, 5, 0
+5000, Curve, 0, 100, 500, 100, 0.001
+
+5700, Signs, 4, 0
+6000, Curve, 0, 100, 500, 100, -0.001
+
+//
+// Add some speed limit signs
+//
+
+    0, Speed Limit, 55, 0
+  100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+ 1500, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+ 3000, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+ 4500, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+ 6000, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+
+//
+// Add our signalized intersections
+//
+
+800, Sign, 7, -2000, 4, 0, 0, 0, 
+2800, Intersection, 0, 0, 1, 2, 2, 0, , , 6
+
+
+
+2800,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Navigation.Pde,,-,750
+1550, Signal Light, -2000, 8, 3, 15, 0, 1, 5, 1, 0, 1
+3550, Intersection, 0, 0, 1, 3, 3, 0, , , 6
+
+
+6750,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Navigation.Pde,,-,750
+5500, Signal Light, -2000, 0, 0, 20, 0, 3, 6, 1, 0, 1
+7500, Intersection, 0, 0, 1, 4, 4, 0
+
+//
+// Add some roadway objects to make it look interesting
+//
+
+2556, Vehicles, 1000, 800{0}, 50{0}, 2, T15, 1, 1
+2556, Vehicles, 1000, 1600{0}, 45{0}, 2, T6, 1, 1
+3400, Vehicles, 0, -6{0}, 25{0}, 3, T2, 1, 0
+
+// Gas Station
+3900, Building, 0, 40{0}, B4
+                    3800, Block, 0, 0, -1{1}, 0.4, 100, 0.01, 200, 255/255/255, 0, , , C:\STISIM3\Data\Textures\Road24.jva, 6, 6, 6, 
+
+4500, Building, 0, -200{0}, B27
+
+4600, Tree, 100, 0, *2; 5; 6; 9; 12; 16; 18, 80{0}, 150{0}, 0
+7400, Tree, 0, 0, 0, 0, 0, 0
+7600, Tree, 100, 0, *2; 5; 6; 9; 12; 16; 18, 80{0}, 150{0}, 0
+
+//
+// End the simulation run
+//
+
+//
+// Add triggered events to the scenario
+//
+

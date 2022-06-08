@@ -1,0 +1,796 @@
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+Config_GroundWidth = 800
+
+    
+    
+
+    Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+    Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+
+
+//
+// Data collection
+//
+
+ 4700, Begin Block Save, 1, .01, Data Collection 1, 1, 6, 4, 23, 74, 75, 18, 46#1, 61, 62
+ 6000, End Block Save
+ 7100, Begin Block Save, 1, .01, Data Collection 2, 1, 6, 7, 23, 18, 58, 60, 46#6, 37, 38, 0
+ 7400, End Block Save
+10085, Begin Block Save, 1, .01, Data Collection 3, 1, 6, 7, 23, 18, 59, 60, 0
+10385, End Block Save
+15600, Begin Block Save, 1, .01, Data Collection 4, 1, 6, 7, 23, 58, 59, 66, 18, 46#2, 2
+16100, End Block Save
+16100, Begin Block Save, 1, .01, Data Collection 5, 1, 6, 7, 23, 18, 58, 60, 46#7, 37, 38, 0
+16400, End Block Save
+17500, Begin Block Save, 1, .01, Data Collection 6, 1, 6, 7, 23, 66, 18, 74, 75, 37, 38, 46#3
+19900, End Block Save
+20700, Begin Block Save, 1, .01, Data Collection 7, 1, 6, 7, 23, 18, 46#4
+28700, End Block Save
+30100, Begin Block Save, 1, .01, Data Collection 8, 1, 6, 7, 23, 18, 59, 60, 0
+30400, End Block Save
+31200, Begin Block Save, 1, .01, Data Collection 9, 1, 6, 7, 23
+34600, End Block Save
+40200, Begin Block Save, 1, .01, Data Collection 10, 1, 6, 7, 23, 18, 74, 75, 61, 62, 46#5, 66, 2
+40800, End Block Save
+
+//
+// Define what happens when a driver crashes
+//
+
+ 5000, Crash Settings, 0, 18{0}
+ 5700, Crash Settings, 0, 6{0}
+13860, Crash Settings, 0, -6{1}
+17800, Crash Settings, 0, 6{0}, 15, 50
+19330, Crash Settings, 0, 6{0}, 5, 50
+
+//
+// Define our roadway sections
+//
+
+    0, Roadway, 12, 2, 1, 4, 1, 10, 10, 0.333, 0.333, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 0, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+ 1650, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 0, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+ 3900, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 0, 20, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 0, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+ 5800, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 0, 0, 30, 20, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+ 9900, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 10, 0, 0, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 10, 0, 5, 140, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, 5, 140, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+10800, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, 0, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 0, 0, 0, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+12200, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, -5, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, -5, 6, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 6, 0, -30, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 0, 0, -30, 10, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+17200, Roadway, 12, 2, 1, 1, 1, 10, 10, 0.333, 0.333, 200, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, -5, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 10, 0, -5, 10, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, 7, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 15, 0, 7, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+20700, Roadway, 12, 2, 1, 2, 1, 10, 10, 0.333, 0.333, 30, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, 10, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 15, 0, 10, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+22450, Roadway, 12, 2, 1, 1, 1, 10, 10, 0.333, 0.333, 30, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, 10, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 15, 0, 10, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+28700, Roadway, 12, 2, 1, 1, 1, 10, 10, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, 0, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 15, 0, 0, 30, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+30500, Roadway, 12, 2, 1, 1, 1, 10, 10, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, -5, 8, C:\STISIM3\Data\Textures\Dirt03.Jpg, 255/255/255, 8, 0, 10, 60, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 15, 0, 10, 60, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+34700, Roadway, 12, 4, 2, 2, 1, 6, 12, 0.333, 0.333, 100, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 5, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 10, 0, 5, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 10, 0, 0, 6, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 6, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+35950, Roadway, 12, 4, 2, 2, 1, 6, 12, 0.333, 0.333, 30, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 25, 0, 2, 10, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 25, 0, 0, 6, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 6, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+36550, Roadway, 12, 4, 2, 2, 1, 6, 12, 0.333, 0.333, 30, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 5, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 10, 0, 5, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 10, 0, 0, 6, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 6, 0, 0, 6, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 6, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+38800, Roadway, 12, 4, 2, 2, 1, 10, 10, 0.333, 0.333, 200, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Road20.Jva, 255/255/255, 0, 0, 0, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 10, 0, 0, 10, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 10, 0, -.5, 150, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, -.5, 150, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 10, 0, , , , 0
+
+//
+// Add hills
+//
+
+  500, Hill, 500, -0.01
+ 1000, Hill, 500, 0.01
+ 3400, Hill, 500, 0.0075
+ 4000, Hill, 500, -0.0075
+13200, Hill, 500, 0.0075
+14200, Hill, 500, -0.0075
+18700, Hill, 500, 0.0075
+19200, Hill, 500, -0.0075
+20700, Hill, 500, 0.01
+21200, Hill, 1000, -0.005
+
+//
+// Add horizontal curves
+//
+
+ 1000, Curve, 0, 50, 500, 50, -0.001
+ 4300, Curve, 0, 400, 900, 400, 0.001047
+14200, Curve, 0, 100, 750, 100, 0.001
+18200, Curve, 0, 100, 750, 100, -0.0001
+19200, Curve, 0, 100, 750, 100, -0.0001
+20200, Curve, 0, 100, 750, 100, 0.0002
+21700, Curve, 0, 75, 500, 75, 0.001
+31700, Curve, 0, 75, 200, 75, 0.0035
+33200, Curve, 0, 75, 200, 75, -0.0035
+35700, Curve, 0, 100, 1000, 0, 0.0005
+
+//
+// Include curve signs and other signage
+//
+
+  700, Sign, 4
+ 4000, Sign, 5
+13900, Sign, 5
+16350, Sign, 11, 550
+17900, Sign, 4
+18900, Sign, 4
+19900, Sign, 5
+21400, Sign, 5
+30400, Sign, 5, 1000
+32900, Sign, 4
+35400, Sign, 5
+
+//
+// Add background foliage
+//
+
+    0, Tree, 50, 10, *2; 5; 6; 9; 12; 16; 18, 45{0}, 70{0}, 0
+ 9800, Tree, 0, 0, 0, 0{0}, 0{0}, 0
+10800, Tree, 50, 0, *2; 5; 6; 9; 12; 16; 18, 50{0}, 100{0}, 0
+14800, Tree, 0, 0, 0, 0{0}, 0{0}, 0
+15800, Tree, 50, 0, *2; 5; 6; 9; 12; 16; 18, 50{0}, 100{0}, 0
+16700, Tree, 150, 0, *2; 5; 6; 9; 12; 16; 18, 40{0}, 150{0}, 0
+29900, Tree, 0, 0, 0, 0{0}, 0{0}, 0
+30250, Tree, 150, 0, *2; 5; 6; 9; 12; 16; 18, 40{0}, 150{0}, 0
+34500, Tree, 150, 0, *2; 5; 6; 9; 12; 16; 18, 150{0}, 200{0}, 0
+37500, Tree, 150, 0, *2; 5; 6; 9; 12; 16; 18, 40{0}, 150{0}, 0
+39000, Tree, 0, 0, 0, 0{0}, 0{0}, 0
+
+//
+// Add speed limits
+//
+
+    0, Speed Limit, 48
+  100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+ 1900, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+ 3000, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+ 4500, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp35Mph.mesh, 0, 0, 0
+ 4700, Speed Limit, 38
+ 5500, Speed Limit, 48
+ 5700, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+ 7350, Sign, 100, 850, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+ 9950, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+10200, Sign, 100, 1200, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+14200, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0
+17500, Speed Limit, 58
+16300, Sign, 100, 1400, C:\STISIM3\Data\Signs\Speed Limit\Sp55Mph.mesh, 0, 0, 0
+21000, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp55Mph.mesh, 0, 0, 0
+23700, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp55Mph.mesh, 0, 0, 0
+30185, Static Object, 0, 150{0}, 0, 90, 0, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp35Mph.mesh
+30350, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp35Mph.mesh, 0, 0, 0
+30500, Speed Limit, 38
+32500, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp35Mph.mesh, 0, 0, 0
+35100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp35Mph.mesh, 0, 0, 0
+37750, Speed Limit, 48
+37950, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0, 0, 0
+39700, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh, 0
+
+//
+// Add a single intersection early in the drive with traffic all around
+//
+
+ 700, Vehicles, 0, -6{1}, 70{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+
+2506, Vehicles, 0, 700{0}, 65{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+2518, Vehicles, 0, 1100{0}, 65{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+2494, Vehicles, 0, -400{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+2494, Vehicles, 0, -600{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+2494, Vehicles, 0, -1000{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+
+2000, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+2200, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+2500, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+2700, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+2900, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+3000, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+3200, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+3400, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+3700, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+3800, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+3900, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4000, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4100, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4300, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+1250, Building, 0, -120{0}, G13, 0
+1500, Building, 0, -100{0}, G2, 90
+1500, Building, 0, 100{0}, U5, 0
+2200, Building, 0, -120{0}, G3, 0
+2200, Building, 0, 120{0}, G6, 0
+2700, Building, 0, 120{0}, G4, 0
+2830, Building, 0, -120{0}, G47, 0
+               
+2000, Sign, 8, 0, 4, 0, 0, 0
+2465, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+2535, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+2500, Intersection, 0, 0, 1, 4, 4, 0
+0, Signal Light, -2500, 8, 5, 15, 0, 0, 6, 1, 0, 1
+
+//
+//  Add a construction zone with a vehicle backing event
+//
+
+// Construction material
+
+4400,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,28{0},0
+4700,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,28{0},0
+
+// Add the lane markers
+
+5000, Barrel, 0, 0{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5030, Barrel, 0, -3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5030, Barrel, 0, 0{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5060, Barrel, 0, -5{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5060, Barrel, 0, 1{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5090, Barrel, 0, -7{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5090, Barrel, 0, 3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5120, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5120, Barrel, 0, 5{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5150, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5150, Barrel, 0, 7{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5180, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5180, Barrel, 0, 8{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5210, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5210, Barrel, 0, 10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5240, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5240, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5270, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5270, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5300, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5300, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5310, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5330, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5330, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5330, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5360, Barrel, 0, -7{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5360, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5360, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5390, Barrel, 0, -5{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5390, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5390, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5420, Barrel, 0, -3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5420, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5420, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5435, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5450, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5450, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5465, Barrel, 0, 11{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5480, Barrel, 0, 6{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5480, Barrel, 0, 24{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5495, Barrel, 0, 3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+5515, Barrel, 0, 26{0}, 4, 1, , 0
+5535, Barrel, 0, 26.5{0}, 4, 1, , 0
+5555, Barrel, 0, 26{0}, 4, 1, , 0
+5575, Barrel, 0, 26{0}, 4, 1, , 0
+5595, Barrel, 0, 26.5{0}, 4, 1, , 0
+5615, Barrel, 0, 26.5{0}, 4, 1, , 0
+5635, Barrel, 0, 25{0}, 4, 1, , 0
+
+// Backing vehicle
+          
+      5470, Vehicles#1, 0, 37{0}, 0{0}, 4, T29, 1, 0, 2.5{0}, 2, -12{0}, , , 1, {25}, 2, 0{0}, , , 1, 3{26}, 2, 14{0}, , , 1, {25}, 2, 0{0}, , , 1
+                            
+// Workers
+
+5087, Pedestrian, 0, 0, 0, 33{0}, R, 21
+5090, Pedestrian, 0, 0, 0, 30{0}, L, 20
+5300, Pedestrian, 0, 10, 5, -2.7{0}, F, 20
+5385, Pedestrian, 0, 0, 0, 30{0}, F, 20
+5400, Pedestrian, 0, 10, 4, -2{0}, F, 21
+
+// Construction vehicles
+
+4100, Vehicles, 1000, 30{0}, 0{0}, 1, CN7, 1, 0
+4110, Vehicles, 1000, -6{0}, 0{0}, 1, E5, 1, 0
+4140, Vehicles, 1000, 29{0}, 0{0}, 1, CN5, 1, 0
+4200, Vehicles, 1000, 31{0}, 0{0}, 1, CN9, 1, 0
+4305, Vehicles, 1000, 0{0}, 0{0}, 1, CN6, 1, 0
+4350, Vehicles, 1000, 0{0}, 0{0}, 3, CN3, 1, 0
+4440, Vehicles, 1000, 36{0}, 0{0}, 1, CN2, 1, 0
+4445, Vehicles, 1000, 6{0}, 0{0}, 1, CN1, 1, 0
+4500, Vehicles, 1000, 30{0}, 0{0}, 1, E5, 1, 0
+
+// Opposing traffic
+
+4500, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4600, Vehicles, 0, 5{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4700, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4800, Vehicles, 0, 5{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+4900, Vehicles, 0, 5{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+5000, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+5500, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+5700, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+5900, Vehicles, 0, 4{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6000, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6200, Vehicles, 0, 3{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6350, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6500, Vehicles, 0, 3{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6700, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6700, Vehicles, 0, 4{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6800, Vehicles, 0, 6{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+6900, Vehicles, 0, 5{2}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Backgrounsd buildings
+
+5500, Building, 0, 100{0}, G9, 0
+5500, Building, 0, -100{0}, U4, 0
+6500, Building, 0, 100{0}, G4, 0
+6500, Building, 0, -100{0}, B5, 0
+6500, Building, 0, 100{0}, B3, 0
+6700, Building, 0, 100{0}, G10, 0
+6800, Building, 0, -100{0}, B28, 0
+7050, Building, 0, -300{0}, G1, 0
+7100, Building, 0, 400{0}, G8, 0
+7100, Building, 0, 600{0}, S6, 0
+7300, Building, 0, 500{0}, G6, 0
+7400, Building, 0, 700{0}, S5, 0
+
+//
+// Add an intersection and have the driver turn left
+//
+
+6700, Sign, 8, 0, 4, 0, 0, 0
+7165, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+7235, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+7200, Intersection, 0, 0, 1, 4, 4, 2
+4700, Signal Light, -2500, 0, 0, 0, 0, 0, 6, 1, 0, 1
+
+// Tell the driver to turn
+
+6450,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Navigation.Pde,,-,750
+
+// Add cross traffic
+
+7206, Vehicles, 0, 1500{0}, 52{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+
+7182, Vehicles, 0, -500{0}, 66{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+7182, Vehicles, 0, -150{0}, 20{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+7194, Vehicles, 0, -140{0}, 20{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Add approaching traffic
+
+ 8000, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8100, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8150, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8200, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8300, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8400, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8450, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8500, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8600, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8700, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8800, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 8900, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 9000, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 9100, Vehicles, 0, -16{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 9150, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+ 9300, Vehicles#6, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+10100, Vehicles, 0, -18{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+10200, Vehicles, 0, -6{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+//
+// Setup a little town section with pedestrians and some traffic
+//
+
+// Pedestrians at the near cross walk
+
+10151, Pedestrian, 0, 7, 4, -48{0}, L, *1~5; 8; 12~16; 27~30; 35
+10153, Pedestrian, 0, 9, 4, 77{0}, R, 2
+10153, Pedestrian, 0, 9, 4, 81{0}, R, 11
+10152, Pedestrian, 0, 7, 3, -48{0}, L, *1~5; 8; 12~16; 27~30; 35
+10157, Pedestrian, 0, 9, 2, 68{0}, R, *1~5; 8; 12~16; 27~30; 35
+
+// Cross traffic vehicles
+
+10191, Vehicles, 0, 200{0}, 80{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+10191, Vehicles, 0, 400{0}, 70{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+10191, Vehicles, 0, 500{0}, 66{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+
+10165, Vehicles, 0, -75{0}, 10{0}, 4, SP16, 0, 1
+10165, Vehicles, 0, -120{0}, 10{0}, 4, SP16, 0, 1
+10165, Vehicles, 0, -150{0}, 10{0}, 4, SP16, 0, 1
+
+10210, Vehicles, 0, -3{1}, 10{0}, 1, SP16, 0, 0
+10235, Vehicles, 0, -3{1}, 10{0}, 1, SP16, 0, 0
+10250, Vehicles, 0, -3{1}, 10{0}, 1, SP16, 0, 0
+
+10265, Vehicles, 0, -35{0}, 0{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+10265, Vehicles, 0, -48{0}, 0{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+ 9975, Building, 0, -40{0}, B9
+10100, Building, 0, -40{0}, B5
+10020, Building, 0, 40{0}, G64
+10265, Building, 0, -30{0}, B4
+10255, Building, 0, 30{0}, B6
+10345, Building, 0, 30{0}, G5
+10285, Building, 0, -200{0}, G24
+10050, Building, 0, -200{0}, G13, 90
+10150, Building, 0, 300{0}, G6, 90
+10210, Building, 0, 300{0}, G35, -90
+10465, Building, 0, -30{0}, G1
+10465, Building, 0, 30{0}, G2
+
+//
+// Turn right at the intersection
+//
+
+// Add the intersection and signage
+
+ 7300, Sign, 7, -2885, 2, 0, 0
+10155, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+10215, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+10185, Intersection, 0, 0, 1, 4, 4, 1
+
+// Tell the driver to turn
+                    
+ 9435,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Navigation.Pde,-,,750
+                    
+//
+// Add background stuff until we get to the next event
+//
+                                        
+11800, Vehicles, 0, -6{0}, 62{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+12200, Vehicles, 0, -7{0}, 55{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+12800, Vehicles, 0, 6{2}, 55{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+12850, Vehicles, 0, 6{2}, 55{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+12950, Vehicles, 0, 6{2}, 55{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+13000, Vehicles, 0, 6{2}, 55{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+13150, Vehicles, 0, 6{2}, 55{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+13300, Vehicles, 0, 6{2}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+13800, Vehicles, 0, 6{2}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+13850, Vehicles, 0, 6{2}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+13950, Vehicles, 0, 6{2}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14050, Vehicles, 0, 6{2}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14150, Vehicles, 0, 6{2}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14350, Vehicles, 0, 6{2}, 75{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14550, Vehicles, 0, 6{2}, 75{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14750, Vehicles, 0, 6{2}, 75{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14850, Vehicles, 0, 6{2}, 75{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+14950, Vehicles, 0, 6{2}, 75{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Benign vehicle pulling into traffic
+
+       12850, Vehicles, 0, 6{1}, 0{0}, 1, E5, 1, 1, 8{0}, 1, -12{7}, 20, 5, {25}, 2, 73{0}, , , 5, 16500{7}, 1, 6{1}, 20, 5, {25}, 2, 0{0}, , , 5
+
+12800, Building, 0, 200{0}, H11
+12970, Building, 0, 150{0}, U2
+
+//
+// Display a benign intersection with signal light
+//
+
+12800, Sign, 8, 0, 4, 0, 0, 0
+13265, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+13335, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+13300, Intersection, 0, 0, 1, 4, 4, 0
+11300, Signal Light, -2000, 0, 0, 0, 0, 0, 6, 1, 0, 1
+
+// Cross traffic
+
+13306, Vehicles, 0, 700{0}, 65{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+13294, Vehicles, 0, -1500{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+13282, Vehicles, 0, -1600{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+
+//
+// Add another construction zone to force the driver into the right lane
+//
+
+// Add some construction material
+
+13500,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,4{1},0
+13700,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\ConstructionSign.Pde,0,0,4{1},0
+13875, Static Object, 0, 0{0}, 0, 0, 5, , C:\STISIM3\Data\Construction\Pallet_of_Bricks.Mka
+13925, Static Object, 0, 0{0}, 0, 0, 5, , C:\STISIM3\Data\Construction\YellowDumpster.Mka
+13975, Static Object, 0, -5{0}, 0, 0, 0, , C:\STISIM3\Data\Construction\ConcretePipe.Mka
+13985, Static Object, 0, 5{0}, 0, 0, 0, , C:\STISIM3\Data\Construction\ConcretePipe.Mka
+14000, Static Object, 0, -5{0}, 0, 0, 0, , C:\STISIM3\Data\Construction\ConcretePipe.Mka
+14010, Static Object, 0, 5{0}, 0, 0, 0, , C:\STISIM3\Data\Construction\ConcretePipe.Mka
+
+13875, Collision Block, 0, 3.5{0}, 7, 7
+13925, Collision Block, 0, 3{0}, 12, 6
+13993, Collision Block, 0, 0{0}, 40, 20
+
+// Add the lane markers
+
+13700, Barrel, 0, 0{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13730, Barrel, 0, -3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13730, Barrel, 0, 3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13760, Barrel, 0, -5{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13760, Barrel, 0, 5{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13790, Barrel, 0, -7{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13790, Barrel, 0, 7{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13820, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13820, Barrel, 0, 10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13850, Barrel, 0, -12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13850, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13880, Barrel, 0, -12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13880, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13910, Barrel, 0, -12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13910, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13940, Barrel, 0, -12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13940, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+13970, Barrel, 0, 12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+14070, Barrel, 0, -12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+14100, Barrel, 0, -12{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+14120, Barrel, 0, -3{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+14130, Barrel, 0, -10{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+14160, Barrel, 0, -7{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+14190, Barrel, 0, -5{0}, 2, 4, C:\STISIM3\Sound\Thud.Wav, 100
+
+// Approaching vehicles
+
+15700, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+15730, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+15790, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+15850, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+16700, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+16750, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+16850, Vehicles#7, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+//
+// Change lane to turn left with vehicle in blind spot
+//
+
+16165, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+16235, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+16200, Intersection, 0, 0, 1, 2, 2, 2
+13700, Signal Light, -2500, 0, 0, 0, 0, 0, 6, 1, 0, 1
+15450,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Navigation.Pde,,-,750
+
+// Cross traffic
+
+15100, Vehicles, 1106, 700{0}, 65{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+15100, Vehicles, 1094, -600{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+15100, Vehicles, 1082, -1000{0}, 65{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Vehicle from behind
+
+       13950, Vehicles#2, -600, 18{0}, 135{4}, 1, T6, 1, 1, 14200{7}, 1, -12{7}, 20, 1.5, 15{22}; !16200{14}, 2, 80{1}, 200, 50, 4
+
+// Approaching vehicles
+
+17150, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+17250, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+17400, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+17500, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+17550, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+//
+// Setup a head on collision event
+//
+
+// Add some background structures
+
+18900, Building, 0, 200{1}, U1
+18950, Building, 0, 250{1}, U2
+19000, Building, 0, 220{1}, H4
+19400, Building, 0, -300{2}, U1
+19450, Building, 0, -350{2}, U2
+19500, Building, 0, -320{2}, H7
+20450, Building, 0, -600{2}, U3
+20500, Building, 0, -750{2}, U2
+20600, Building, 0, -550{2}, H12
+
+// Head on vehicle
+
+       19815, Vehicles#3, 0, -6{0}, 85{0}, 3, C17, 1, 0, 10{0}, 1, 10{7}, 20, 2, {25}, 2, 110{0}, , , 2, 1{0}, 1, -10{7}, 20, 3
+
+18850, Vehicles, 0, 6{2}, 80{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+19050, Vehicles, 0, 6{2}, 80{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+19300, Vehicles, 0, 6{2}, 80{0}, 3, C16, 1, 0
+19700, Vehicles, 0, 6{2}, 70{0}, 3, C12, 1, 0
+19850, Vehicles, 0, 5{2}, 70{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+19900, Vehicles, 0, 5{2}, 70{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+19950, Vehicles, 0, 5{2}, 70{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+20000, Vehicles, 0, 5{2}, 70{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+20700, Vehicles, 0, 6{2}, 1{1}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+20800, Vehicles, 0, 6{2}, 1{1}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+//
+// Slow vehicle event
+//
+
+       19300, Vehicles#4, 1200, 6{0}, 20{0}, 1, C15, 1, 0, 10{0}, 2, 30{0}, , , 2
+
+// Approaching traffic
+       
+23200, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+23800, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24200, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24330, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24370, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24420, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24480, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24550, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24600, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24650, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+24700, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+25100, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+25200, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+25270, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+25350, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+27700, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+28700, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+29500, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+30100, Vehicles, 0, -6{0}, 88{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Background buildings
+
+24000, Building, 0, 340{1}, H16
+25500, Building, 0, 450{1}, H10
+27900, Building, 0, 610{1}, H14
+
+23300, Building, 0, -320{2}, H8
+23600, Building, 0, -310{2}, H1
+24500, Building, 0, -360{2}, H13
+24900, Building, 0, -310{2}, H14
+26300, Building, 0, -300{2}, H4
+26700, Building, 0, -500{2}, H11
+27400, Building, 0, -420{2}, H1
+28600, Building, 0, -270{2}, H12
+
+//
+// Turn right at the intersection
+//
+
+27700, Sign, 7, -2500, 3, 0
+30180, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+30200, Intersection, 1, 0, 2, 4, 4, 1
+
+// Tell the driver to turn
+
+29450,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Navigation.Pde,-,,750
+
+// Add a gas station at the corner
+
+30148, Building, 0, 18{0}, B4
+30038.5, Block, 0, 0, -0.5{1}, 0.5, 150, 0.5, 150, 255/255/255, 0, 0, 0, C:\STISIM3\Data\Textures\Concrete3.Jva, 15, 15, 1
+
+//
+// Drive through a neighborhood
+//
+
+35500, Vehicles, 0, 6{2}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+34700, Vehicles, 1000, 28{0}, 10{0}, 1, SP16, 1, 0
+
+// Add the houses
+
+35250, Static Object, 0, 10{1}, 0, -90, 0, 0, C:\STISIM3\Data\Buildings\House\House_Group.Mka
+35250, Static Object, 0, -10{2}, 0, 90, 0, 0, C:\STISIM3\Data\Buildings\House\House_Group.Mka
+37175, Static Object, 0, 10{1}, 0, -90, 0, 0, C:\STISIM3\Data\Buildings\House\House_Group.Mka
+37175, Static Object, 0, -10{2}, 0, 90, 0, 0, C:\STISIM3\Data\Buildings\House\House_Group.Mka
+
+35600, Building, 0, 10{1}, H4, 0
+35750, Building, 0, 10{1}, H7, 0
+35900, Building, 0, 10{1}, H10, 0
+36050, Building, 0, 20{1}, H5, 0
+36200, Building, 0, 20{1}, H8, 0
+36350, Building, 0, 20{1}, H11, 0
+36500, Building, 0, 20{1}, H6, 0
+36650, Building, 0, 10{1}, H9, 0
+
+35600, Building, 0, -10{2}, H9, 0
+35750, Building, 0, -10{2}, H6, 0
+35900, Building, 0, -10{2}, H11, 0
+36050, Building, 0, -10{2}, H8, 0
+36200, Building, 0, -10{2}, H5, 0
+36350, Building, 0, -10{2}, H10, 0
+36500, Building, 0, -10{2}, H7, 0
+36650, Building, 0, -10{2}, H4, 0
+
+// Add traffic in all directions
+
+36250, Vehicles, 0, 28{0}, 0{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+36350, Vehicles, 0, 28{0}, 0{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+36500, Vehicles, 0, 28{0}, 0{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+36550, Vehicles, 0, 18{0}, 55{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+37000, Vehicles, 0, 18{0}, 55{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+37000, Vehicles, 0, 18{0}, 50{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+37500, Vehicles, 0, 18{0}, 50{0}, 1, F*1~56; S*1~53; T*1~30, 1, 1
+
+36850, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37010, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37090, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37180, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37250, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37500, Vehicles, 0, -6{0}, 49{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37750, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+37780, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+38250, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+38230, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+35750, Vehicles, 1156, 360{0}, 51{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+
+35750, Vehicles, 1134, -100{0}, 40{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+35750, Vehicles, 1146, -500{0}, 55{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+35750, Vehicles, 1134, -900{0}, 40{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+35750, Vehicles, 1146, -1200{0}, 55{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Add an intersection
+
+34750, Sign, 7, -2150, 4, 0, 0, 0
+36865, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+36935, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+36900, Intersection, 0, 0, 1, 4, 4, 0
+
+// Add pedestrians at the intersection
+
+36867, Pedestrian, 0, 36300{14}, 2, 60{0}, R, 2
+36870, Pedestrian, 0, 36300{14}, 2, 60{0}, R, 5
+36930, Pedestrian, 0, 36300{14}, 2, -50{0}, L, *3; 14; 15; 16
+36930, Pedestrian, 0, 36300{14}, 2, -60{0}, L, *27~30; 8
+36932, Pedestrian, 0, 36300{14}, 2, -60{0}, L, *27~30; 8
+
+//
+// Set up our little city scene where a vehicle runs a light
+//
+
+       39800, Vehicles#5, 894, -894{0}, 0{1}, 4, C11, 0, 0, {25}, 11, 1
+
+39225, Static Object, 0, -20{2}, 0.05, 0, 0, 0, C:\Stisim3\Data\Buildings\Building_Group_Left_Near.Mka
+39225, Static Object, 0, 20{1}, 0.05, 0, 0, 0, C:\Stisim3\Data\Buildings\Building_Group_Right_Near.Mka
+39750, Static Object, 0, -20{2}, 0.05, 0, 0, 0, C:\Stisim3\Data\Buildings\Building_Group_Left_Far.Mka
+39750, Static Object, 0, 20{1}, 0.05, 0, 0, 0, C:\Stisim3\Data\Buildings\Building_Group_Right_Far.Mka
+40450, Static Object, 0, 20{1}, 0.05, 180, 0, 0, C:\Stisim3\Data\Buildings\Building_Group_Left_Far.Mka
+40000, Building, 0, 20{1}, G5, 0
+40150, Building, 0, 20{1}, G3, 0
+40175, Building, 0, -20{2}, G65, 0
+40900, Building, 0, 20{1}, G18, 0
+40850, Building, 0, -20{2}, B24, 0
+41025, Building, 0, -20{2}, G67, 0
+
+// Add a couple of intersections
+
+39465, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+39535, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+39500, Intersection, 0, 0, 1, 4, 4, 0
+37000, Signal Light, -2500, 0, 0, 0, 0, 0, 6, 1, 0, 1
+
+40665, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 0
+40735, Sign, 100, 0, C:\STISIM3\Data\Signs\Street Signs\StreetSign.mesh, 0, 1
+40700, Intersection, 0, 0, 1, 4, 4, 0
+38200, Signal Light, -2500, 0, 0, 0, 0, -25, 6, 1, 0, 1
+
+// Add opposing traffic
+
+39700, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+39730, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+39790, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+39850, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40200, Vehicles, 0, -6{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40300, Vehicles, 0, -18{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40450, Vehicles, 0, -6{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40450, Vehicles, 0, -18{0}, 66{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40550, Vehicles, 0, -6{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40600, Vehicles, 0, -18{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40650, Vehicles, 0, -18{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40700, Vehicles, 0, -6{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40770, Vehicles, 0, -18{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40780, Vehicles, 0, -6{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40820, Vehicles, 0, -18{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40860, Vehicles, 0, -6{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+40860, Vehicles, 0, -18{0}, 65{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+41450, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+41500, Vehicles, 0, -6{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+41830, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+41980, Vehicles, 0, -18{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+42100, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+42140, Vehicles, 0, -5{0}, 50{0}, 3, F*1~56; S*1~53; T*1~30, 1, 1
+
+// Add cross traffic
+
+38400, Vehicles, 1106, 700{0}, 65{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+39700, Vehicles, 1006, 40{0}, 0{0}, 2, F*1~56; S*1~53; T*1~30, 1, 1
+
+38400, Vehicles, 1094, -48{0}, 0{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+38400, Vehicles, 1082, -48{0}, 0{0}, 4, F*1~56; S*1~53; T*1~30, 1, 1
+
+//
+// End the simulation drive
+//
+
+41000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+
+//
+// Add triggered events to the scenario
+//
+

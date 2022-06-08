@@ -1,0 +1,31 @@
+
+//
+// Define any constants
+// Made by the OGs Tory Spindle and Austin Zamarripa
+//
+
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_GroundWidth = 800
+Config_Poly_Out = 1
+Config_Button_PanLeft = 0
+Config_Button_PanRight = 0
+Config_Button_Pause = 0
+
+0, Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\2106_Stopping_Practice.EVT
+8500,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\2106_Practice_Drive_Mini_Acclimation1.EVT
+50500,Previously Defined Events, C:\STISIM3\Scenarios\2106\MinutePause.pde
+50500,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\2106_Practice_Drive_Mini_Acclimation2.EVT
+92500,Previously Defined Events, C:\STISIM3\Scenarios\2106\MinutePause.pde
+92500,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\2106_Practice_Drive_Mini_Acclimation3.EVT
+
+//
+// End the simulation run
+//
+ 
+134500, Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+
+//
+// Add triggered events to the scenario
+//

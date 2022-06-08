@@ -1,0 +1,32 @@
+//
+// by Austin Zamarripa and Tory Spindle
+//
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+//Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Break.txt
+//Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Break.txt
+
+
+//
+// Call the different sections of the roadway
+//
+
+
+0, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 3\Segment 1\2106_DA_Version_1.pde
+16500, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 3\Segment 2\2106_Residential_01_Version_3B.pde,-,,-,-,-
+21500, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 3\Segment 1\2106_Car_Following.pde
+
+
+//
+// End the simulation run
+//
+//55200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+//41000,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Segment 2\2106_Residential_02_Version_1.pde,-,,-,-

@@ -1,0 +1,92 @@
+
+//
+// by George Park
+//
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_UrbanDriving.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_UrbanDriving.txt
+Config_Start_Y = -6{1}
+Config_GroundWidth = -1
+
+//
+// Data collection
+//
+
+1500, Begin Block Save, 1, .01, Data Collection 1, 1, 6, 7, 23, 18, 74, 75, 35, 36, 46#1, 66, 2
+1900, End Block Save
+1900, Begin Block Save, 1, .01, Data Collection 2, 1, 6, 7, 23, 18, 59, 60, 46#2
+2200, End Block Save
+2200, Begin Block Save, 1, .01, Data Collection 3, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#7
+2400, End Block Save
+3000, Begin Block Save, 1, .01, Data Collection 4, 1, 6, 7, 23, 18, 74, 75, 35, 36, 46#3, 66, 2
+4000, End Block Save
+4200, Begin Block Save, 1, .01, Data Collection 5, 1, 6, 7, 2, 66, 23, 35, 36, 18
+4400, End Block Save
+5000, Begin Block Save, 1, .01, Data Collection 6, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#4
+5400, End Block Save
+5400, Begin Block Save, 1, .01, Data Collection 7, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#5
+5900, End Block Save
+6100, Begin Block Save, 1, .01, Data Collection 8, 1, 6, 7, 23, 18, 58, 60, 46#9, 37, 38, 46#8
+6300, End Block Save
+6300, Begin Block Save, 1, .01, Data Collection 9, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#6
+6600, End Block Save
+
+//
+// Define the initial roadway
+//
+
+   0, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+1500, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+2500, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+3700, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Concrete3.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+6650, Roadway, 12, 6, 3, 2, 1, 10, 10, 0.4, 0.4, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, -1, C:\STISIM3\Data\Textures\Road23.Jva, 255/255/255, 6, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Left.Jva, 255/255/255, 8, 0, 0, 8, C:\STISIM3\Data\Textures\CurbSidewalk_Right.Jva, 255/255/255, 8, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, 100, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, C:\STISIM3\Data\Textures\Grass05.Jva, 255/255/255, 10, 0, 0, , , , 0
+
+//
+// Add some horizontal curves
+//
+
+   0, Curve, 0, 500, 500, 500, 0.001
+3000, Curve, 0, 500, 500, 500, -0.001
+
+//
+// Define what happens when the driver crashes
+//
+
+0, Crash Settings, 0, 6{0}, 1, 25
+
+//
+// Define the speed limit and post signs
+//
+
+   0, Speed Limit, 55, 0
+ 100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+1200, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+2200, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+4800, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\Sp45Mph.mesh
+
+//
+// Define the various sections of the roadway environment
+//
+
+   0,Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Shops_4_A03.pde,,-,-
+2200,Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Shops_4_A04.pde,,-,-
+3200,Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Shops_4_A05.pde,,-,-
+4200,Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Shops_4_A06.pde,,-,-
+
+//
+// End the simulation drive
+//
+
+//
+// Add triggered events to the scenario
+//
+

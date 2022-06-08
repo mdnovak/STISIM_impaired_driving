@@ -1,0 +1,28 @@
+//
+// by Austin Zamarripa and Tory Spindle
+//
+
+//
+// Define any constants
+//
+
+
+
+//
+// Call the different sections of the roadway
+//
+
+0, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Segment 1\2106_Car_Following.pde
+43000,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Segment 2\2106_Residential_01_Version_1A.pde,-,,-,-,-
+49000,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Segment 1\2106_DA_Version_1.pde
+
+
+
+///53800,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Segment 3\2106_Freeway_Merges_Version_1 - Copy.pde
+
+
+//
+// End the simulation run
+//
+//55200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+//41000,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Segment 2\2106_Residential_02_Version_1.pde,-,,-,-

@@ -1,0 +1,37 @@
+
+//
+// Define any constants
+// Made by the OGs Tory Spindle and Austin Zamarripa
+//
+
+
+// CONFIGURATION OVERIDES
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_GroundWidth = 800
+Config_Poly_Out = 1
+Config_Button_PanLeft = 0
+Config_Button_PanRight = 0
+Config_Button_Pause = 0
+
+
+0,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\2106_Stopping_Practice.EVT
+8500,  Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\2106_Car_Following_Acclimation - Short.pde
+17000, Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\2106_DA_Version_Acclimation.pde
+26000, Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Residential_02.pde,-,-,,-
+
+
+//4500, Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\2106_DA_Version_Acclimation.pde
+//24500, Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Residential_02.pde,-,-,,-
+//29000, Previously Defined Events,C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\School_Zone_Diff.pde
+//32000, Previously Defined Events, C:\STISIM3\Scenarios\2106\Practice Drive\PDEs\Hazards_Urban_Easy.Evt 
+
+//
+// End the simulation run
+//
+ 
+30000, Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+
+//
+// Add triggered events to the scenario
+//

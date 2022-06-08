@@ -1,0 +1,51 @@
+
+//
+// by Austin Zamarripa and Tory Spindle
+//
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//   
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_GroundWidth = 800
+Config_Poly_Out = 1
+Config_Button_PanLeft = 0
+Config_Button_PanRight = 0
+Config_Button_Pause = 0
+
+//
+// Add the lead vehicle for the vehicle following task
+//
+
+//300, Play Recording, C:\STISIM3\Sound\FLLWInstructions.wav, 0, 100
+//1000, Vehicle Following, 80.6777, 200, 6{0}, E5, 15, 10, 60, C:\STISIM3\Data\Wind_and_Speed_Profiles\SpeedProfile_Short.Sin, 1, 100, 100
+
+
+
+//
+// Call the different sections of the roadway
+//
+
+0, Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Car Following Suburban Drive1A.evt,-,,-,-,-
+65500,Previously Defined Events, C:\STISIM3\Scenarios\2106\MinutePause.pde
+65500,Previously Defined Events,C:\STISIM3\Scenarios\2106\Drive 1\Orange and Construction Drive1A.evt
+
+
+
+//
+// End simulation run
+//
+
+102200,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+
+//
+// Add triggered events to the scenario
+//
+

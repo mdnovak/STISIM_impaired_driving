@@ -1,0 +1,92 @@
+
+//
+// Define any constants
+//
+
+
+//
+// Override any specific configuration settings
+//
+
+Config_LoadingMessage = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_Start_Instructions = C:\STISIM3\Scenarios\Instructions\Instructions_Normal.txt
+Config_Start_Y = -6{1}
+
+//
+// Data collection
+//
+
+
+ 1000, Begin Block Save, 1, .01, Data Collection Metro 1, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#1
+ 1700, End Block Save
+ 1700, Begin Block Save, 1, .01, Data Collection Metro 2, 1, 6, 7, 23, 18, 74, 75, 46#2, 65
+ 2300, End Block Save
+ 3000, Begin Block Save, 1, .01, Data Collection Metro 3, 1, 6, 7, 23, 18, 59, 60, 46#3
+ 3300, End Block Save
+ 3300, Begin Block Save, 1, .01, Data Collection Metro 4, 1, 6, 7, 23, 18, 74, 75, 35, 36, 46#4, 66, 2
+ 4100, End Block Save
+ 5900, Begin Block Save, 1, .01, Data Collection Rural Test, 1, 6, 7, 23
+ 7900, End Block Save
+ 7900, Begin Block Save, 1, .01, Data Collection Head On, 1, 6, 7, 23, 66, 18, 74, 75, 37, 38, 46#5
+ 9400, End Block Save
+11500, Begin Block Save, 1, .01, Data Collection Farmland 1, 1, 6, 7, 23, 74, 75, 18, 35, 36, 46#6
+12700, End Block Save
+13700, Begin Block Save, 1, .01, Data Collection Farmland 2, 1, 6, 7, 23, 66, 18, 74, 75, 37, 38, 46#7
+14700, End Block Save
+14700, Begin Block Save, 1, .01, Data Collection Farmland 3, 1, 6, 7, 23, 65, 2
+15100, End Block Save
+17000, Begin Block Save, 1, .01, Data Collection School Zone 1, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#9
+17500, End Block Save
+17500, Begin Block Save, 1, .01, Data Collection School Zone 2, 1, 6, 7, 23, 18, 74, 75, 35, 36, 46#10, 66, 2
+17800, End Block Save
+17800, Begin Block Save, 1, .01, Data Collection School Zone 3, 1, 6, 7, 23, 18, 58, 60, 46#13, 37, 38, 46#12
+18100, End Block Save
+19000, Begin Block Save, 1, .01, Data Collection Condos 1, 1, 6, 7, 23, 74, 75, 18, 63, 64, 46#11
+20000, End Block Save
+
+//
+// Define what happens if the driver crashes
+//
+                                            
+0, Crash Settings, 0, 6{0}, 20, 50
+
+//
+// Define our initial roadway section
+//
+
+0, Roadway, 12, 6, 3, 2, 0, 10, 10, 0.4, 0.4, 50, 0, C:\STISIM3\Data\Textures\Road21.Jva, 255/255/255, 6, 0, 0, C:\STISIM3\Data\Textures\Road21.Jva, 255/255/255, 6, 0, 0, 10, C:\STISIM3\Data\Textures\Grass04.Jpg, 255/255/255, 12, 0, 0, 10, C:\STISIM3\Data\Textures\Grass04.Jpg, 255/255/255, 12, 0, 0, 100, C:\STISIM3\Data\Textures\Grass04.Jpg, 255/255/255, 12, 0, 0, 100, C:\STISIM3\Data\Textures\Grass04.Jpg, 255/255/255, 12, 0, C:\STISIM3\Data\Textures\Grass04.Jpg, 255/255/255, 12, 0, C:\STISIM3\Data\Textures\Grass04.Jpg, 255/255/255, 12, 0, 4, C:\STISIM3\Data\Textures\Road21.Jva, 255/255/255, 6, 0
+
+//
+// Set our initial speed limit and show it to the driver
+//
+
+  0, Speed Limit, 48, 0
+100, Sign, 100, 0, C:\STISIM3\Data\Signs\Speed Limit\SP45MPH.mesh
+
+//
+// Add some initial foliage
+//
+
+    0, Tree, 300, 0, *2; 5; 6; 9; 12; 16; 18, 15{1}, 100{1}, 0
+20500, Tree, 300, 0, *2; 5; 6; 9; 12; 16; 18, 15{1}, 100{1}, 0
+
+//
+// Add the various sections of the drive
+//
+
+    0,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Metro_A01.pde
+ 4900,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Rural_Test_A01.pde
+10000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Farmland_A01.pde,,-,,-,,-,,
+16000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\School_A01.pde,-
+18000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\Res_Condos_A01.pde
+
+//
+// End the simulation run
+//
+
+22000,Previously Defined Events,C:\STISIM3\Scenarios\PDEs\EndSimulation.Pde
+
+//
+// Add triggered events to the scenario
+//
+
