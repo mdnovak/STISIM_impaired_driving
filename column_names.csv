@@ -1,0 +1,11 @@
+﻿blockName,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12
+Vehicle Control,time,distance,lateralPosition,mph,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+Baseline SDLP Measure,time,distance,lateralPosition,mph,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+Crash Avoidance Medium,time,distance,ftPerSec,lateralPosition,mph,collision,pctGas,pctBrake,distanceRoad,objLatPos,objSpeed,wheelInput
+Crash Avoidance Hard,time,distance,ftPerSec,lateralPosition,mph,collision,pctGas,pctBrake,distanceRoad,objLatPos,objSpeed,wheelInput
+Divided Attention Task,time,distance,lateralPosition,mph,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+Amber Dilemma Rural,time,distance,lateralPosition,mph,collision,pctGas,pctBrake,lightStatus,blank1,blank2,#N/A,#N/A
+Crash Avoidance Easy,time,distance,ftPerSec,lateralPosition,mph,collision,pctGas,pctBrake,distanceRoad,objLatPos,objSpeed,wheelInput
+SDLP 2-Lane Baseline,time,distance,lateralPosition,mph,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+Stop Light Reaction,time,distance,lateralPosition,mph,collision,pctGas,pctBrake,lightStatus,blank1,blank2,#N/A,#N/A
+Amber Dilemma Urban,time,distance,lateralPosition,mph,collision,pctGas,pctBrake,lightStatus,blank1,blank2,#N/A,#N/A
